@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://1uvpoj4g1gyj"]
+
+[ext_resource type="Texture2D" uid="uid://g2eeqcvd870y" path="res://assets/fullTiles.png" id="1_6rmpi"]
+[ext_resource type="Script" path="res://game.gd" id="1_wg55g"]
+[ext_resource type="Texture2D" uid="uid://x2hptihsry2q" path="res://assets/aliens.png" id="2_piesi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_si20v"]
+texture = ExtResource("1_6rmpi")
+texture_region_size = Vector2i(65, 89)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -10)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -10)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -10)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -10)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -10)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -10)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -10)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, -10)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -10)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, -10)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -10)
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, -10)
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, -10)
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, -10)
+2:3/0 = 0
+2:3/0/texture_origin = Vector2i(0, -10)
+3:3/0 = 0
+3:3/0/texture_origin = Vector2i(0, -10)
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, 10)
+1:4/0 = 0
+1:4/0/texture_origin = Vector2i(0, -10)
+2:4/0 = 0
+2:4/0/texture_origin = Vector2i(0, -10)
+3:4/0 = 0
+3:4/0/texture_origin = Vector2i(0, -10)
+
+[sub_resource type="TileSet" id="TileSet_hm27l"]
+tile_shape = 3
+tile_layout = 5
+tile_size = Vector2i(65, 68)
+sources/0 = SubResource("TileSetAtlasSource_si20v")
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_wg55g")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_hm27l")
+format = 2
+layer_0/name = "0"
+layer_0/y_sort_enabled = true
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(-196603, 196608, 3, -262138, 196608, 3, -327673, 196608, 3, -393208, 196608, 3, -458743, 196608, 3, -524278, 196608, 3, -589813, 196608, 3, -655348, 196608, 3, -720883, 196608, 3, -720882, 196608, 3, -720881, 196608, 3, -720880, 196608, 3, -720879, 196608, 3, -655343, 196608, 3, -655342, 196608, 3, -589806, 196608, 3, -524271, 196608, 3, -458736, 196608, 3, -393200, 196608, 3, -327665, 196608, 3, -327666, 196608, 3, -262130, 196608, 3, -262131, 196608, 3, -196595, 196608, 3, -196596, 196608, 3, -131060, 196608, 3, -131061, 196608, 3, -65525, 196608, 3, -65526, 196608, 3, 10, 196608, 3, 9, 196608, 3, 65545, 196608, 3, 65544, 196608, 3, 131079, 196608, 3, 196614, 196608, 3, 131078, 196608, 3, 131077, 196608, 3, -65531, 196608, 3, 5, 196608, 3, 65541, 196608, 3, 65542, 196608, 3, 65543, 196608, 3, 8, 196608, 3, -65527, 196608, 3, -131062, 196608, 3, -196598, 196608, 3, -262134, 196608, 3, -262135, 196608, 3, -196600, 196608, 3, -131065, 196608, 3, -65529, 196608, 3, -196597, 196608, 3, -262132, 196608, 3, -327667, 196608, 3, -393203, 196608, 3, -458739, 196608, 3, -524275, 196608, 3, -524276, 196608, 3, -458741, 196608, 3, -393206, 196608, 3, -327671, 196608, 3, -262133, 196608, 3, -393202, 196608, 3, -458737, 196608, 3, -524272, 196608, 3, -524273, 196608, 3, -458742, 196608, 3, -393207, 196608, 3, -327672, 196608, 3, -262137, 196608, 3, -196601, 196608, 3, -327669, 196608, 3, -393205, 196608, 3, -196602, 196608, 3, -131067, 196608, 3, -131064, 196608, 3, -131066, 196608, 3, -262136, 196608, 3, -196599, 196608, 3, -327670, 196608, 3, -65528, 196608, 3, -131063, 196608, 3, -393201, 196608, 3, -458740, 196608, 3, -393204, 196608, 3, -327668, 196608, 3, -524274, 196608, 3, -458738, 196608, 3, -589808, 196608, 3, -589807, 196608, 3, -655344, 196608, 3, -655345, 196608, 3, -655346, 196608, 3, -655347, 196608, 3, -589812, 196608, 3, -524277, 196608, 3)
+layer_1/name = "1"
+layer_1/y_sort_enabled = true
+layer_1/tile_data = PackedInt32Array(-393203, 0, 4, -327668, 0, 4, -262133, 0, 4, -196598, 0, 4, -131063, 0, 4, -131064, 0, 4, -196600, 0, 4, -327671, 0, 4, -458738, 0, 4, -458737, 0, 4, -458736, 0, 4, -393201, 0, 4, -327666, 0, 4, -262131, 0, 4, -196596, 0, 4, -393206, 0, 4, -458741, 0, 4, -262136, 0, 4, -458740, 0, 4)
+
+[node name="Player" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(321, 474)
+texture = ExtResource("2_piesi")
+offset = Vector2(0, -15)
+region_enabled = true
+region_rect = Rect2(-0.236755, 130.487, 39.5132, 53.8816)
